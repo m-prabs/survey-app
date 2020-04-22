@@ -1,0 +1,112 @@
+.sn-survey-app-ssa {
+  font-family: var(--now-font-family, sans-serif);
+  line-height: var(--now-line-height);
+  color: var(--now-color--text-primary);
+  font-size: 1rem;
+  .ssa-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 5rem;
+    .ssa-content {
+      .ssa-card {
+        border: 1px solid #ccc;
+        width: 40rem;
+        background-color: #fff;
+        box-shadow: 0 0 4rem 0 rgba(0, 0, 0, 0.5);
+        border-radius: 0.6rem;
+        padding: 1.5rem 3rem;
+
+        .ssa-card-status {
+          margin-bottom: 2rem;
+          border-bottom: 1px solid #bbb;
+          padding-bottom: 0.5rem;
+          .ssa-status {
+            display: flex;
+            justify-content: space-between;
+            font-style: italic;
+            font-variant: all-small-caps;
+            font-size: 1.4rem;
+          }
+        }
+
+        .ssa-card-question {
+          .ssa-qs-options {
+            padding: 2rem 0;
+          }
+          .ssa-option {
+            display: flex;
+
+            input,
+            label {
+              cursor: pointer;
+            }
+            &-input {
+              margin: 0 1rem;
+            }
+          }
+          .ssa-option.--radio,
+          .ssa-option.--checkbox {
+            & {
+              padding: 1rem 0;
+              cursor: pointer;
+            }
+            &:hover {
+              background-color: #eee;
+              border-radius: 0.4rem;
+            }
+          }
+          .ssa-option.--textarea {
+            flex-direction: column;
+            padding: 1rem 0;
+            .ssa-option-input {
+              margin: 0;
+              textarea {
+                width: 95%;
+                resize: vertical;
+                padding: 1rem;
+                font-size: inherit;
+                background-color: RGB(
+                  var(--now-color--neutral-1, 246, 247, 247)
+                );
+                border: 1px solid
+                  RGB(var(--now-color--neutral-4, 191, 197, 198));
+                border-radius: 4px;
+                box-shadow: inset 0 0px 15px rgba(0, 0, 0, 0.06);
+              }
+            }
+          }
+        }
+        .ssa-card-submit {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          padding: 2rem 0 1rem;
+          .ssa-submit-text {
+            font-size: 2rem;
+            font-weight: lighter;
+            margin: 0 0 3rem;
+            text-align: center;
+          }
+          .ssa-submit-cta {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+          }
+        }
+      }
+    }
+    .ssa-pagination {
+      width: 45rem;
+      &-btns {
+        display: flex;
+        justify-content: space-between;
+        padding: 4rem 0;
+      }
+    }
+  }
+}
+@import "./btns";
+@import "./rating";

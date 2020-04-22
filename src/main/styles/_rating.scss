@@ -1,0 +1,62 @@
+.sn-survey-app-ssa {
+  .ssa-option.--rating {
+    padding: 3rem 0;
+    &:hover {
+      background-color: inherit;
+      border-radius: 0;
+    }
+  }
+  .ssa-rating {
+    border: none;
+    padding: 1rem 0 0;
+    width: 100%;
+    margin: 0;
+    legend {
+      font-style: italic;
+      font-variant: all-small-caps;
+      font-size: 1.2rem;
+    }
+    &-container {
+      display: flex;
+      justify-content: space-evenly;
+      text-align: center;
+    }
+    &-pill {
+      box-sizing: border-box;
+      border: 1px solid #cecece;
+      flex: 1;
+      padding: 0.5rem 0;
+      cursor: pointer;
+
+      &:not(:first-of-type) {
+        border-left: none;
+      }
+      &:first-of-type {
+        border-top-left-radius: 4px;
+        border-bottom-left-radius: 4px;
+      }
+      &:last-of-type {
+        border-top-right-radius: 4px;
+        border-bottom-right-radius: 4px;
+      }
+
+      input {
+        display: none;
+      }
+    }
+    &-pill.--selected {
+      background-color: RGB(var(--now-color--primary-1, 30, 133, 109));
+      color: #fff;
+      border-color: RGB(var(--now-color--primary-1, 30, 133, 109));
+    }
+    &-container:hover {
+      .ssa-rating-pill {
+        background-color: RGB(var(--now-color--primary-0, 221, 237, 233));
+        color: inherit;
+      }
+      .ssa-rating-pill:hover ~ .ssa-rating-pill {
+        background-color: inherit;
+      }
+    }
+  }
+}

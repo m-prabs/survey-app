@@ -1,0 +1,83 @@
+.sn-survey-app-ssa {
+  .ssa-btn {
+    border-radius: 0.3rem;
+    background: RGB(var(--now-color--primary-1, 30, 133, 109));
+    border: none;
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1.3rem;
+    font-weight: 100;
+    padding: 0.7rem;
+    min-width: 12rem;
+    cursor: pointer;
+    box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.4);
+    transition: all 0.3s ease 0s;
+
+    span {
+      cursor: pointer;
+      display: inline-block;
+      position: relative;
+      transition: 0.4s;
+    }
+  }
+  .ssa-btn.--prev,
+  .ssa-btn.--goback {
+    span:before {
+      content: "\00AB";
+      position: absolute;
+      opacity: 0;
+      top: 0;
+      left: -20px;
+      transition: 0.5s;
+    }
+    &:hover span {
+      padding-left: 25px;
+    }
+    &:hover span:before {
+      opacity: 1;
+      left: 0;
+    }
+  }
+  .ssa-btn.--goback {
+    color: inherit;
+    box-shadow: none;
+    border: 1px solid RGB(var(--now-color--neutral-10, 80, 97, 99));
+    background: none;
+  }
+  .ssa-btn.--next {
+    span:after {
+      content: "\00bb";
+      position: absolute;
+      opacity: 0;
+      top: 0;
+      right: -20px;
+      transition: 0.5s;
+    }
+    &:hover span {
+      padding-right: 25px;
+    }
+    &:hover span:after {
+      opacity: 1;
+      right: 0;
+    }
+  }
+  .ssa-btn.--submit,
+  .ssa-btn.--done {
+    &:hover {
+      // color: RGB(var(--now-color--text-secondary, 66, 80, 81));
+      font-weight: 700 !important;
+      letter-spacing: 0.2rem;
+      min-width: 12rem;
+      // background: none;
+      box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
+      transition: all 0.3s ease 0s;
+    }
+  }
+  .ssa-btn.--disabled {
+    background: RGB(var(--now-color--neutral-6, 154, 164, 165));
+  }
+  .ssa-btn.submit-card-btn {
+    margin-bottom: 1rem;
+  }
+}
