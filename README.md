@@ -1,6 +1,6 @@
 # Demo Survey App
 
-Seismic based survey app.
+An easy to configure web component based survey app.
 
 ### Screenshot of app
 
